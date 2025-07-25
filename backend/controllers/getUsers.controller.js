@@ -1,12 +1,11 @@
 import User from "../models/user.model.js";
 
-// GET /api/users?search=someusername
 export async function getUserList(req, res) {
   try {
     const searchQuery = req.query.search || "";
 
     const filter = searchQuery
-      ? { username: { $regex: searchQuery, $options: "i" } } // case-insensitive search
+      ? { username: { $regex: searchQuery, $options: "i" } }
       : {};
 
     const users = await User.find(filter, "username");
@@ -23,7 +22,6 @@ export async function getUserList(req, res) {
   }
 }
 
-// GET /api/users/count
 export async function count(req, res) {
   try {
     const users = await User.find({}, "username");

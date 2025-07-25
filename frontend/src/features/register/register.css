@@ -1,45 +1,61 @@
 .Register-wrapper {
-  height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #f9f9f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
 }
 
 .Register-form {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  border-radius: 5px;
-  gap: 10px;
-  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 35px 30px;
+  gap: 18px;
+  width: 100%;
+  max-width: 360px;
 }
 
 .Register-input {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 250px;
-  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #000000;
+  transition: border-color 0.3s, background-color 0.3s;
 }
+
+.Register-input:focus {
+  outline: none;
+  border-color: #555555;
+  background-color: #f2f2f2;
+}
+
 .Register-btn {
-  color: white;
-  background-color: black;
-  font-weight: 300;
-  border-radius: 5px;
-  height: 30px;
-  width: 100px;
-  align-self: center;
-  text-align: center;
-  font-size: medium;
-  transition-duration: 0.4s;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
+
 .Register-btn:hover {
-  background-color: white;
-  color: black;
+  background-color: #333333;
 }
 
 #Register-para {
-  font-size: large;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 700;
   text-align: center;
+  color: #000000;
+  margin-bottom: 10px;
 }
